@@ -66,7 +66,7 @@ const Profession: React.FC = () => {
           <div className="fade-in-on-scroll">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.pexels.com/photos/2132097/pexels-photo-2132097.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://img.freepik.com/free-photo/close-up-hands-holding-basket-with-vegetables_23-2148332238.jpg"
                 alt="Maraîcher dans ses champs"
                 className="w-full h-96 object-cover"
               />

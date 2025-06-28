@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         
         <button 
           onClick={() => scrollToSection('produits')}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="absolute top-[40em] left-1/2 transform -translate-x-1/2 animate-bounce"
           aria-label="Faire défiler vers le bas"
         >
           <ArrowDown className="w-8 h-8 text-white" />

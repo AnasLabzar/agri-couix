@@ -93,33 +93,52 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
+      // Use FormSubmit to send the email
+      const response = await fetch('https://formsubmit.co/contact@agri-couix.com', {
+      // const response = await fetch('https://formsubmit.co/principeanas80@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,  
+          message: formData.message,
+        }),
       });
+
+      if (response.ok) {
+        console.log('Email sent successfully:', formData);
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
+      console.error('Error sending email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }
   };
+  
 
   const contactInfo = [
     {
@@ -131,7 +150,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      info: 'contact@couix-maraicher.fr',
+      info: 'contact@agri-couix.com',
       description: 'Réponse sous 24h'
     },
     {

@@ -25,7 +25,7 @@ const Products: React.FC = () => {
     {
       category: 'Légumes de Saison',
       items: ['Tomates', 'Courgettes', 'Aubergines', 'Poivrons', 'Salades', 'Radis'],
-      image: 'https://images.pexels.com/photos/1367278/pexels-photo-1367278.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.unsplash.com/photo-1464297162577-f5295c892194?auto=compress&cs=tinysrgb&w=800',
       description: 'Cultivés avec soin dans le respect des saisons'
     },
     {
@@ -37,7 +37,7 @@ const Products: React.FC = () => {
     {
       category: 'Herbes Aromatiques',
       items: ['Basilic', 'Persil', 'Ciboulette', 'Thym', 'Romarin', 'Menthe'],
-      image: 'https://images.pexels.com/photos/1974328/pexels-photo-1974328.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.unsplash.com/photo-1627738663093-d0779d56e3bc?auto=compress&cs=tinysrgb&w=800',
       description: 'Pour parfumer vos plats avec des saveurs naturelles'
     }
   ];
